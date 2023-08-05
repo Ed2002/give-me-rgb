@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .view
+{
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  height: 100vh; 
+  margin: 0; 
+}
+
+.rgb-value
+{
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+} */
