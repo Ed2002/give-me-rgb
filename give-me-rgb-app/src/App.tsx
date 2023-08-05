@@ -9,13 +9,13 @@ function App() {
   const [RgbValue,SetRgbValue] = useState<string>('');
 
   const generateRGB = () => {
-      const doc = document.getElementById("v");
-      const vals = document.getElementById("rgb-val");
-      const cop = document.getElementById("cop");
-      const gi = document.getElementById("neon-img");
-      const gt = document.getElementById("neon-tri");
-      const gb = document.getElementById("neon-blo");
-      const ts = document.getElementById("text-shadow");
+      const doc = document.getElementById("v") as HTMLElement;
+      const vals = document.getElementById("rgb-val") as HTMLElement;
+      const cop = document.getElementById("cop") as HTMLElement;
+      const gi = document.getElementById("neon-img") as HTMLElement;
+      const gt = document.getElementById("neon-tri") as HTMLElement;
+      const gb = document.getElementById("neon-blo") as HTMLElement;
+      const ts = document.getElementById("text-shadow") as HTMLElement;
       const r = Math.floor(Math.random() * 255);
       const g = Math.floor(Math.random() * 255);
       const b = Math.floor(Math.random() * 255);
@@ -27,11 +27,11 @@ function App() {
 
       vals?.setAttribute("data-value", `rgb(${r},${g},${b})`)
 
-      gi.style = `filter: drop-shadow(0px 0px 16px rgba(${r},${g},${b}, 1));`
-      gt.style = `filter: drop-shadow(0px 0px 16px rgba(${r},${g},${b}, 1));`
-      gb.style = `filter: drop-shadow(0px 0px 16px rgba(${r},${g},${b}, 1));`
+      gi.setAttribute("style",`filter: drop-shadow(0px 0px 16px rgba(${r},${g},${b}, 1));`) 
+      gt.setAttribute("style",`filter: drop-shadow(0px 0px 16px rgba(${r},${g},${b}, 1));`) 
+      gb.setAttribute("style",`filter: drop-shadow(0px 0px 16px rgba(${r},${g},${b}, 1));`) 
 
-      ts.style = `text-shadow: 4px 4px 2px rgba(${r},${g},${b},1);`
+      ts.setAttribute("style",`text-shadow: 4px 4px 2px rgba(${r},${g},${b},1);`)
 
       cop.innerHTML = "";
 
@@ -46,9 +46,9 @@ function App() {
   }
 
   const copyrgb = () => {
-    const vals = document.getElementById("rgb-val");
+    const vals = document.getElementById("rgb-val") as HTMLElement;
 
-    navigator.clipboard.writeText(vals.getAttribute('data-value'));
+    navigator.clipboard.writeText(vals.getAttribute('data-value') as string);
 
     setcopy(true);
 
