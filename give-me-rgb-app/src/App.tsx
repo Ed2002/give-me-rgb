@@ -20,8 +20,6 @@ function App() {
       const g = Math.floor(Math.random() * 255);
       const b = Math.floor(Math.random() * 255);
 
-      console.log(r, g, b);
-
       SetRgbValue(`${r}, ${g}, ${b}`);
 
       vals.innerText = `${r} ${g} ${b}`
