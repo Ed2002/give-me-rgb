@@ -87,17 +87,6 @@ function App() {
           <div className="flex justify-center items-center flex-wrap" id="cop">
           </div>
         </div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6955490112365845"
-     crossOrigin="anonymous"></script>
-    <ins className="adsbygoogle"
-        style={{display: 'block'}}
-        data-ad-client="ca-pub-6955490112365845"
-        data-ad-slot="5010352747"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
       <Terminal>
         <TerminalText>rbga({RgbValue}, 0.1);</TerminalText>
         <TerminalText>rbga({RgbValue}, 0.2);</TerminalText>
